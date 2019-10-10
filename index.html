@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="author" content="">
+        <!-- mobile settings -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Title will be here</title>
+        <!--Web font css-->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,900" rel="stylesheet" type="text/css">
+        <!--Bootstrap CSS-->
+        <link href="assets/css/bootstrap.css" rel="stylesheet">
+        <!--Custom CSS-->
+        <link href="assets/css/master.css" rel="stylesheet">
+        <!--Icon font css-->
+        <link href="assets/css/font-awesome.css" rel="stylesheet">
+        <!--[if lt IE 9]>
+        <script src="assets/js/html5shiv.min.js"></script>
+        <script src="assets/js/respond.min.js"></script>
+        <![endif]-->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/bootstrap.js"></script>
+		<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+		<script src ="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+    </head>
+	<!-- Form structure -->
+		<body>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 offset-2">
+						<div class ="text-center"><h2>Sample Form</h2></div>
+							<form action="" name="registration" id="registration">
+									<label for="firstname">Name * </label>
+									<input type="text" name="firstname" id="firstname">
+									<label for="emailVal">Email * </label>
+									<input type="email" name="emailVal" id="emailVal">
+									<label for="urlVal">URL</label>
+									<input type="url" name="urlVal" id="urlVal">
+									<label for="commentVal">Your Comment * </label>
+									<input type="text" name="commentVal" id="commentVal">
+									
+									<button type="submit">Submit</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			<!-- Script for validation -->			
+			<script>
+					$(function() {
+					$("#registration").validate({
+						rules: {
+									firstname: "required",
+									commentVal: "required", 
+		  
+						emailVal: {
+									required: true,
+									email: true
+									},
+								},
+						submitHandler: function(form) 
+						{
+							form.submit();
+						}	
+					});
+				});
+			</script>
+		</body>
+</html>
+
